@@ -84,3 +84,8 @@ Some commands use external tools if available:
 - `fzf` for `cortex pick`
 - `ripgrep (rg)` for `cortex search`
 
+VIM Binding for Node Linking:
+
+```vim
+noremap <leader>l :r! /home/akhambhati/Downloads/cortex-cli2/bin/cortex pick link 2>/dev/null<CR>
+```
