@@ -32,15 +32,9 @@ MY_CORTEX/
 Linux:
 
 ```bash
-sudo install -m 0755 bin/cortex /usr/local/bin/cortex
-sudo install -m 0644 man/cortex.1 /usr/local/share/man/man1/cortex.1
+echo 'export PATH="/path/to/cortex-cli-repo/bin:$PATH"' >> ~/.bashrc
+cp -rv man/cortex.1 ~/.local/share/man/man1/cortex.1
 sudo mandb 2>/dev/null || true
-```
-
-Termux:
-
-```bash
-install -m 0755 bin/cortex $PREFIX/bin/cortex
 ```
 
 ## Quick start
@@ -87,5 +81,5 @@ Some commands use external tools if available:
 VIM Binding for Node Linking:
 
 ```vim
-noremap <leader>l :r! /home/akhambhati/Downloads/cortex-cli2/bin/cortex pick link 2>/dev/null<CR>
+noremap <leader>l :r! cortex pick link 2>/dev/null<CR>
 ```
