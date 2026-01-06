@@ -1,0 +1,7 @@
+cortex node new — Create a new node directory.
+
+Usage:
+  cortex node new --title TITLE [--type TYPE] [--state STATE] [--access public|private] [--id ID]
+
+Options:
+  --access  Set access classification (default: private).

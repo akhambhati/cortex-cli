@@ -1,0 +1,9 @@
+cortex asset — Manage node assets.
+
+Usage:
+  cortex asset <list|attach|rm> ...
+
+Subcommands:
+  list    List assets for a node
+  attach  Attach file(s) into node assets/
+  rm      Remove an asset from node

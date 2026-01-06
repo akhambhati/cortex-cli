@@ -1,0 +1,58 @@
+cortex_version: 1
+
+node_id:
+  charset: "A-Z0-9"
+  length: 6
+  case: "upper"
+  reserved: []
+
+metadata:
+  required_fields:
+    - id
+    - created
+    - modified
+    - type
+    - state
+    - access
+  defaults:
+    type: "note"
+    state: "inbox"
+    access: "private"
+  allowed:
+    type: []
+    state: []
+    access:
+      - private
+      - public
+
+readme:
+  require_h1: true
+  h1_rule: "first_nonempty_line"
+
+time:
+  format: "iso8601"
+  timezone: "local"
+  include_offset: true
+
+links:
+  syntax: "paren_path"
+  resolve: "strict"
+  ignore_code_blocks: true
+  count_duplicates: false
+
+assets:
+  dir: "assets"
+  max_inline_bytes: 50000000
+  on_oversize: "warn"
+  collision: reject
+  keep_original_name: true
+  store_mode: node
+  allowed_ext:
+
+index:
+  enabled: true
+  mode: "incremental"
+  auto_repair: true
+  require_fresh: true
+  format: "tsv"
+  include_root: false

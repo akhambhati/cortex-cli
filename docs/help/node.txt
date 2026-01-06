@@ -1,0 +1,12 @@
+cortex node — Manage nodes.
+
+Usage:
+  cortex node <new|edit|list|rm|touch|title> ...
+
+Subcommands:
+  new     Create a new node
+  edit    Edit README.md (touches + re-indexes on exit)
+  list    List nodes (uses index)
+  rm      Remove a node
+  touch   Update modified timestamp + re-index
+  title   Get/set title (H1)

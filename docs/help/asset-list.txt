@@ -1,0 +1,4 @@
+cortex asset list — List assets for a node.
+
+Usage:
+  cortex asset list ID

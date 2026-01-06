@@ -1,0 +1,4 @@
+cortex index show — Print an index table.
+
+Usage:
+  cortex index show <nodes|links|assets>

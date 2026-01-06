@@ -1,0 +1,9 @@
+cortex pick link — interactively select a node and returns a Markdown link
+
+Usage:
+  cortex [--root ROOT] pick link
+
+Description:
+  Presents an interactive fzf picker over the node index and 
+  returns a Markdown link to the selected node in the format
+  [<TITLE>](<NODE>/README.md).

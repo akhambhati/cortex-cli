@@ -1,0 +1,16 @@
+cortex — schema-driven CLI for a fixed-layout Cortex knowledge base.
+
+Usage:
+  cortex [--root ROOT] <command> [args...]
+
+Commands:
+  init ROOT --title TITLE     Create a new Cortex instance
+  node <subcommand>           Manage nodes
+  asset <subcommand>          Manage node assets
+  index <subcommand>          Build/show derived indexes
+  validate                    Validate the corpus against schema
+  help                        Show this help
+
+Try:
+  cortex node --help
+  cortex node new --help

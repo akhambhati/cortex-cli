@@ -1,0 +1,4 @@
+cortex node edit — Edit a node file in $EDITOR and re-index.
+
+Usage:
+  cortex node edit ID [README.md|metadata.yml]

@@ -1,0 +1,4 @@
+cortex node list — List nodes.
+
+Usage:
+  cortex node list [--format id|tsv|json|fs]

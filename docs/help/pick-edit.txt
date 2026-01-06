@@ -1,0 +1,8 @@
+cortex pick edit — interactively select a node to edit
+
+Usage:
+  cortex [--root ROOT] pick edit 
+
+Description:
+  Presents an interactive fzf picker over the node index and opens
+  the selected node README.md in $EDITOR for editing.

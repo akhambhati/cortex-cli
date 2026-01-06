@@ -1,0 +1,4 @@
+cortex node touch — Update modified timestamp.
+
+Usage:
+  cortex node touch ID
