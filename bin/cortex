@@ -21,7 +21,7 @@ source "$DIR/lib/cmd_index.sh"
 source "$DIR/lib/cmd_validate.sh"
 source "$DIR/lib/cmd_pick.sh"
 
-SCHEMA_PATH="$DIR/templates/schema.yml"
+SCHEMA_PATH="$DIR/lib/schema.yml"
 
 ROOT=""
 if [[ "${1:-}" == "--root" ]]; then ROOT="$2"; shift 2; fi
