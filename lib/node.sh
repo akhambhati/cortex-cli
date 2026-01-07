@@ -236,12 +236,13 @@ node_title_set() {
 }
 
 node_edit() {
-  local root="$1" id="$2" file="${3:-README.md}"
+  local root="$1" id="$2" file="${3:-README.md}" msg="${4:-""}"
   local p="$root/$id/$file"
   [[ -f "$p" ]] || cortex_die "file not found: $p"
 	prehash="$(node_fingerprint "$root/$id")"
 	(
 		cd "$root" || exit 1
+		[[ -n "$msg" ]] && printf "$msg" >> "$p"
 		"${EDITOR:-vim}"  "$p"
 	)
 	posthash="$(node_fingerprint "$root/$id")"

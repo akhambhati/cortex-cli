@@ -30,8 +30,9 @@ cmd_node() {
         help_if_flag "node-edit" "$@" && return 0
         id="${1:-}"; shift || true
         [[ -n "$id" ]] || cortex_die "node edit: ID required"
-        file="${1:-README.md}"
-        node_edit "$ROOT" "$id" "$file"
+        file="${1:-README.md}"; shift || true
+				msg="${1:-""}"
+        node_edit "$ROOT" "$id" "$file" "$msg"
         ;;
       list)
         help_if_flag "node-list" "$@" && return 0
