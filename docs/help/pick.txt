@@ -1,0 +1,9 @@
+cortex pick — interactively select a node
+
+Usage:
+  cortex pick <edit|rm|link>
+
+Subcommands:
+  edit   Open a node in $EDITOR
+  rm     Remove/delete a node
+  link   Markdown-formatted link to a node

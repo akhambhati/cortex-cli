@@ -1,0 +1,5 @@
+cortex index — Build/show derived indexes.
+
+Usage:
+  cortex index build
+  cortex index show <nodes|links|assets>

@@ -1,0 +1,4 @@
+cortex validate — Validate README/metadata against schema.
+
+Usage:
+  cortex validate

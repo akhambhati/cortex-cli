@@ -1,0 +1,4 @@
+cortex node rm — Remove a node.
+
+Usage:
+  cortex node rm ID [--force]

@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
+source "$DIR/lib/help.sh"
+source "$DIR/lib/common.sh"
+source "$DIR/lib/schema.sh"
+source "$DIR/lib/links.sh"
+source "$DIR/lib/time.sh"
+source "$DIR/lib/validate.sh"
+source "$DIR/lib/index.sh"
+source "$DIR/lib/assets_policy.sh"
+source "$DIR/lib/node.sh"
+source "$DIR/lib/asset.sh"
+source "$DIR/lib/pick.sh"
+
+source "$DIR/lib/cmd_init.sh"
+source "$DIR/lib/cmd_node.sh"
+source "$DIR/lib/cmd_asset.sh"
+source "$DIR/lib/cmd_index.sh"
+source "$DIR/lib/cmd_validate.sh"
+source "$DIR/lib/cmd_pick.sh"
+
+SCHEMA_PATH="$DIR/lib/schema.yml"
+
+ROOT=""
+if [[ "${1:-}" == "--root" ]]; then ROOT="$2"; shift 2; fi
+cmd="${1:-}"
+
+case "$cmd" in
+  ""|-h|--help|help)
+    shift || true
+		help_show "$(help_key "$@")"
+    exit 0
+    ;;
+esac
+
+[[ -n "$ROOT" ]] || ROOT="$(pwd -P)"
+
+case "$cmd" in
+  init) shift; cmd_init "$@" ;;
+  node) shift; cmd_node "$@" ;;
+  asset) shift; cmd_asset "$@" ;;
+  index) shift; cmd_index "$@" ;;
+  validate) shift; cmd_validate "$@" ;;
+  pick) shift; cmd_pick "$@" ;;
+  *) cortex_die "unknown command: $cmd" ;;
+esac

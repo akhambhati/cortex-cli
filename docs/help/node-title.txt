@@ -1,0 +1,5 @@
+cortex node title — Get or set title (README H1).
+
+Usage:
+  cortex node title get ID
+  cortex node title set ID "New Title"

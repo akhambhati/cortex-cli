@@ -1,0 +1,30 @@
+cortex init — Create a new Cortex instance (fixed layout).
+
+Usage:
+  cortex init ROOT --title TITLE [--schema FILE]
+
+Arguments:
+  ROOT                 Path to the directory to create as a Cortex root.
+  --title TITLE        Title written as H1 into ROOT/README.md.
+
+Options:
+  --schema FILE        Use FILE as the schema template (defaults to built-in template
+                       at templates/schema.yml).
+
+What it creates:
+  ROOT/
+    .cortex/
+      schema.yml
+      index/
+        nodes.tsv
+        links.tsv
+        assets.tsv
+        stamp.yml
+      locks/
+    README.md
+    metadata.yml
+
+Notes:
+  - If ROOT already exists, files may be overwritten depending on implementation.
+  - Indexes are built immediately after initialization.
+  - The default schema is copied into ROOT/.cortex/schema.yml.

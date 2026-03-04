@@ -1,0 +1,4 @@
+cortex asset rm — Remove an asset from a node.
+
+Usage:
+  cortex asset rm ID FILENAME

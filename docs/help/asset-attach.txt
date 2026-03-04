@@ -1,0 +1,4 @@
+cortex asset attach — Attach file(s) into node assets/.
+
+Usage:
+  cortex asset attach ID <files...>

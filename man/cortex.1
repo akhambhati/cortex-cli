@@ -1,0 +1,28 @@
+.TH CORTEX 1 "2026-01-02" "cortex-cli" "User Commands"
+.SH NAME
+cortex \- schema-driven CLI for a Cortex knowledge base
+.SH SYNOPSIS
+.B cortex
+[\-\-root ROOT] <command> [args...]
+.SH DESCRIPTION
+cortex manages a fixed-layout knowledge base ("Cortex") with a small schema file
+.BR .cortex/schema.yml
+that defines ID rules, metadata requirements, link parsing, and indexing policy.
+.SH COMMANDS
+.TP
+.B init ROOT --title TITLE
+Create a new Cortex instance.
+.TP
+.B node
+Manage nodes.
+.TP
+.B asset
+Manage node assets.
+.TP
+.B index
+Build/show derived indexes.
+.TP
+.B validate
+Validate README + metadata against schema.
+.SH SEE ALSO
+Project README.

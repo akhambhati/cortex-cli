@@ -1,0 +1,8 @@
+cortex pick rm — interactively select a node to remove
+
+Usage:
+  cortex [--root ROOT] pick rm
+
+Description:
+  Presents an interactive fzf picker over the node index and 
+  deletes the selected node.
